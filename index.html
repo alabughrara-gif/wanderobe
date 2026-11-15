@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wanderobe — Wedding-guest outfits delivered to your SF hotel</title>
+  <meta name="description" content="Rent a styled wedding-guest look from a local San Francisco stylist. Delivered to your hotel, steamed and ready. Picked up after the last dance." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a href="#" class="logo">Wander<em>obe</em></a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#how">How it works</a>
+        <a href="#looks">Dress codes</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#stylists">For stylists</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#waitlist" class="btn btn--small">Get early access</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Launching first in San Francisco &amp; Wine Country</p>
+          <h1>Fly in for the wedding.<br /><em>Your outfit's already there.</em></h1>
+          <p class="lead">
+            Rent a complete wedding-guest look, from welcome drinks to the farewell brunch,
+            from a local San Francisco stylist. It's delivered to your hotel steamed and
+            ready to wear, and picked up after the last dance.
+          </p>
+          <div class="hero__ctas">
+            <a href="#waitlist" class="btn">I'm a wedding guest</a>
+            <a href="#stylists" class="btn btn--ghost">I'm a local stylist</a>
+          </div>
+          <ul class="hero__ticks">
+            <li>Carry-on only</li>
+            <li>Backup size included</li>
+            <li>Cleaning included</li>
+          </ul>
+        </div>
+
+        <!-- Mock booking card -->
+        <div class="hero__card" aria-hidden="true">
+          <div class="booking">
+            <div class="booking__head">
+              <span class="pill">Confirmed</span>
+              <span class="booking__date">Fri – Sun</span>
+            </div>
+            <h3>Sonoma vineyard wedding</h3>
+            <p class="muted">Delivered to your hotel · Union Square</p>
+            <ol class="booking__looks">
+              <li><span class="swatch swatch--sage"></span><div><strong>Welcome dinner</strong><small>Midi slip dress + cropped blazer</small></div></li>
+              <li><span class="swatch swatch--wine"></span><div><strong>Ceremony · Cocktail attire</strong><small>Satin wrap dress, block heels, clutch</small></div></li>
+              <li><span class="swatch swatch--sand"></span><div><strong>Farewell brunch</strong><small>Linen set + gold hoops</small></div></li>
+            </ol>
+            <div class="booking__stylist">
+              <span class="avatar">M</span>
+              <div><strong>Your stylist</strong><small>Local SF stylist · Mission District</small></div>
+            </div>
+            <p class="booking__note">🌫️ SF tip: a pashmina is included. Evenings get foggy.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section id="how" class="section">
+      <div class="container">
+        <p class="eyebrow center">How it works</p>
+        <h2 class="center">Four steps, zero garment bags</h2>
+        <div class="steps">
+          <article class="step">
+            <span class="step__num">1</span>
+            <h3>Tell us about the wedding</h3>
+            <p>Dress code, venue, dates and every event on the schedule: rehearsal dinner, ceremony, after-party, brunch.</p>
+          </article>
+          <article class="step">
+            <span class="step__num">2</span>
+            <h3>Match with a local stylist</h3>
+            <p>A vetted SF stylist builds your looks from their own closet based on your measurements and style, then sends them for your approval.</p>
+          </article>
+          <article class="step">
+            <span class="step__num">3</span>
+            <h3>Delivered to your hotel</h3>
+            <p>Everything arrives cleaned, steamed and labelled by event, with a backup size of key pieces in case the fit is off.</p>
+          </article>
+          <article class="step">
+            <span class="step__num">4</span>
+            <h3>Wear it, leave it</h3>
+            <p>On checkout day, leave the bag at the front desk. Your stylist picks it up and handles the cleaning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DRESS CODE EXPLORER ============ -->
+    <section id="looks" class="section section--tint">
+      <div class="container">
+        <p class="eyebrow center">Dress code decoder</p>
+        <h2 class="center">"Garden formal"? We've got you.</h2>
+        <p class="center muted narrow">Choose the dress code on your invitation to see what a typical look includes.</p>
+
+        <div class="tabs" role="tablist" aria-label="Dress codes">
+          <button role="tab" class="tab" aria-selected="true"  data-code="blacktie">Black tie</button>
+          <button role="tab" class="tab" aria-selected="false" data-code="formal">Formal</button>
+          <button role="tab" class="tab" aria-selected="false" data-code="cocktail">Cocktail</button>
+          <button role="tab" class="tab" aria-selected="false" data-code="garden">Garden / semi-formal</button>
+          <button role="tab" class="tab" aria-selected="false" data-code="beach">Beach / coastal</button>
+        </div>
+
+        <div class="decoder" role="tabpanel" aria-live="polite">
+          <div class="decoder__text">
+            <h3 id="decoder-title"></h3>
+            <p id="decoder-desc" class="muted"></p>
+            <ul id="decoder-items" class="checklist"></ul>
+          </div>
+          <div class="decoder__tip">
+            <p class="eyebrow">Bay Area tip</p>
+            <p id="decoder-tip"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section id="pricing" class="section">
+      <div class="container">
+        <p class="eyebrow center">Planned launch pricing</p>
+        <h2 class="center">One price covers delivery, pickup and cleaning</h2>
+        <div class="plans">
+          <article class="plan">
+            <h3>The Ceremony</h3>
+            <p class="plan__price">$129</p>
+            <p class="muted">One complete look for the big day</p>
+            <ul class="checklist">
+              <li>Outfit, shoes, clutch &amp; jewelry</li>
+              <li>Backup size of the main piece</li>
+              <li>Hotel delivery &amp; pickup</li>
+            </ul>
+          </article>
+          <article class="plan plan--featured">
+            <span class="plan__badge">Most popular</span>
+            <h3>The Wedding Weekend</h3>
+            <p class="plan__price">$279</p>
+            <p class="muted">Three looks for the whole weekend</p>
+            <ul class="checklist">
+              <li>Welcome party, ceremony &amp; brunch</li>
+              <li>Accessories for every look</li>
+              <li>Wrap or jacket for SF evenings</li>
+              <li>Hotel delivery &amp; pickup</li>
+            </ul>
+          </article>
+          <article class="plan">
+            <h3>The Bridal Party</h3>
+            <p class="plan__price">Custom</p>
+            <p class="muted">Coordinated looks for groups of 4+</p>
+            <ul class="checklist">
+              <li>Matching palettes or styles</li>
+              <li>One stylist for the whole group</li>
+              <li>Group discount</li>
+            </ul>
+          </article>
+        </div>
+        <p class="center small muted">Optional damage protection: $15. Love a piece? You can buy it at a discount.</p>
+      </div>
+    </section>
+
+    <!-- ============ TRUST ============ -->
+    <section class="section section--tint">
+      <div class="container trust">
+        <div><h3>Professionally cleaned</h3><p class="muted">Every piece is cleaned and steamed between rentals, then delivered in a sealed garment bag.</p></div>
+        <div><h3>Fit-first</h3><p class="muted">We ask for measurements and brands that already fit you, and a backup size comes with every booking.</p></div>
+        <div><h3>Vetted local stylists</h3><p class="muted">Every stylist is interviewed, and their closet and cleaning setup are reviewed before they can take bookings.</p></div>
+        <div><h3>Hotel-friendly</h3><p class="muted">Drop-off and pickup are coordinated with your hotel's front desk or concierge, so you never have to wait in.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ STYLISTS (SUPPLY SIDE) ============ -->
+    <section id="stylists" class="section section--dark">
+      <div class="container split">
+        <div>
+          <p class="eyebrow eyebrow--light">For San Francisco stylists</p>
+          <h2>Turn your closet into a styling business.</h2>
+          <p class="lead">
+            Are you a stylist, boutique owner or fashion lover with a closet full of occasion wear?
+            Style out-of-town wedding guests and earn on your own schedule.
+          </p>
+          <ul class="checklist checklist--light">
+            <li>Choose which bookings you take and when</li>
+            <li>We find the guests; you do the styling</li>
+            <li>Payments and damage deposits handled through the platform</li>
+            <li>Work with hotels in your own neighborhood</li>
+          </ul>
+        </div>
+
+        <form class="card form" id="stylist-form" data-form="stylist" novalidate>
+          <h3>Apply to be a founding stylist</h3>
+          <label>Full name<input name="name" required autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+          <label>Neighborhood
+            <input name="neighborhood" placeholder="e.g. Hayes Valley, Oakland, Marin" required />
+          </label>
+          <label>About how many occasion pieces do you own?
+            <select name="inventory" required>
+              <option value="">Select…</option>
+              <option>Under 25</option>
+              <option>25–75</option>
+              <option>75–200</option>
+              <option>200+ (boutique / rental business)</option>
+            </select>
+          </label>
+          <label>Instagram or portfolio (optional)<input name="portfolio" placeholder="@yourhandle" /></label>
+          <button class="btn btn--full" type="submit">Apply</button>
+          <p class="form__msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ GUEST WAITLIST ============ -->
+    <section id="waitlist" class="section">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Wedding guests</p>
+          <h2>Going to a Bay Area wedding?</h2>
+          <p class="lead">
+            Join the early-access list. Founding guests get <strong>20% off</strong> their first booking
+            and the first pick of stylists.
+          </p>
+          <p class="muted">Serving San Francisco, the East Bay, Marin, Napa and Sonoma.</p>
+        </div>
+
+        <form class="card form" id="guest-form" data-form="guest" novalidate>
+          <h3>Get early access</h3>
+          <label>Full name<input name="name" required autocomplete="name" /></label>
+          <label>Email<input type="email" name="email" required autocomplete="email" /></label>
+          <div class="form__row">
+            <label>Wedding date<input type="date" name="wedding_date" /></label>
+            <label>Dress code
+              <select name="dress_code">
+                <option value="">Not sure yet</option>
+                <option>Black tie</option>
+                <option>Formal</option>
+                <option>Cocktail</option>
+                <option>Garden / semi-formal</option>
+                <option>Beach / coastal</option>
+              </select>
+            </label>
+          </div>
+          <label>Where is the wedding?
+            <select name="location">
+              <option>San Francisco</option>
+              <option>East Bay</option>
+              <option>Marin</option>
+              <option>Napa / Sonoma</option>
+              <option>Somewhere else (tell us!)</option>
+            </select>
+          </label>
+          <label>Usual dress size
+            <select name="size">
+              <option value="">Prefer not to say</option>
+              <option>XS (0–2)</option>
+              <option>S (4–6)</option>
+              <option>M (8–10)</option>
+              <option>L (12–14)</option>
+              <option>XL (16–18)</option>
+              <option>1X–3X (18+)</option>
+            </select>
+          </label>
+          <button class="btn btn--full" type="submit">Join the list</button>
+          <p class="form__msg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="section section--tint">
+      <div class="container narrow">
+        <p class="eyebrow center">FAQ</p>
+        <h2 class="center">Good questions</h2>
+        <details>
+          <summary>What if something doesn't fit?</summary>
+          <p>Every booking includes a backup size of the main piece. If neither works, message your stylist. They'll do their best to swap it the same day, and if they can't, you'll get a refund for that look.</p>
+        </details>
+        <details>
+          <summary>How does hotel delivery work?</summary>
+          <p>Your stylist coordinates with your hotel's front desk or concierge and drops off a labelled garment bag the day before your first event. On checkout day, leave it at the front desk for pickup.</p>
+        </details>
+        <details>
+          <summary>What if I spill wine on it?</summary>
+          <p>Normal wear and minor spills are covered by cleaning. Optional damage protection covers bigger accidents. Without it, repair or replacement costs come out of your deposit.</p>
+        </details>
+        <details>
+          <summary>Who are the stylists?</summary>
+          <p>Independent local stylists, boutique owners and fashion lovers who own their inventory. Each one is vetted before they can accept bookings.</p>
+        </details>
+        <details>
+          <summary>I'm not staying at a hotel. Can you deliver to an Airbnb?</summary>
+          <p>Yes. Short-term rentals within our service area are fine, and we'll arrange a delivery window with you.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="logo">Wander<em>obe</em></a>
+      <p class="small">Made in San Francisco · © <span id="year"></span> Wanderobe</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
